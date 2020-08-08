@@ -1,0 +1,10 @@
+dependencies:
+  '@grunmouse/math-matrix': 'link:../math-matrix'
+  '@grunmouse/math-vector': 'link:../math-vector'
+devDependencies:
+  '@grunmouse/assert': 'link:../assert'
+lockfileVersion: 5.1
+specifiers:
+  '@grunmouse/assert': 'link:..\assert'
+  '@grunmouse/math-matrix': 'link:..\math-matrix'
+  '@grunmouse/math-vector': 'link:..\math-vector'

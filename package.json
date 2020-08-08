@@ -1,0 +1,24 @@
+{
+  "name": "@grunmouse/sopromat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "format": "cjs",
+  "private": true,
+  "engine": {
+    "node": ">=9.5.0"
+  },
+  "author": {
+    "name": "Rakov",
+    "email": "grunmouse@mail.ru"
+  },
+  "license": "MIT",
+  "dev": true,
+  "devDependencies": {
+    "@grunmouse/assert": "link:..\\assert"
+  },
+  "dependencies": {
+    "@grunmouse/math-matrix": "link:..\\math-matrix",
+    "@grunmouse/math-vector": "link:..\\math-vector"
+  }
+}
