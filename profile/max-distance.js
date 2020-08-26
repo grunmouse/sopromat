@@ -36,7 +36,6 @@ function maxDbyFunc(rho, O, R, a){
  * Функция наибольшего расстояния от точки R
  * @param {Array<Vector>} points - точки наружного контура
  * @param {Vector} R - точка, относительно которой считаем расстояния
- * @param {number} a - угол, на который повёрнута ось X' относительно оси X
  */
 function maxRbyPoints(points, R){
 	let maxX;

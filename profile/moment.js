@@ -5,15 +5,17 @@ const {Matrix} = require('@grunmouse/math-matrix');
 /**
  * @typedef {object} MomentReport
  * @property {number} F - площадь сечения
- * @property {Vector} [C = CF.div(F)] - центр тяжести сечения
- * @property {Vector} [CF = C.mul(F)] - произведение центра тяжести на площадь
- * @property {Vector} [P = C] - точка, относительно которой рассчитаны моменты, если опущена - полагается P=C
- * @property {Vector} J - осевые моменты инерции сечения относительно точки P
- * @property {number} [Jxy = 0] - центробежный момент инерции сечения относительно точки P
- * @property {Vector} [S = C.sub(P).mul(F)] - статические моменты сечения относительно точки P
+ * @property {Vector2} C - центр тяжести сечения
+ * @property {Vector2} [P = C] - точка, относительно которой рассчитаны моменты, если опущена - полагается P=C
+ * @property {Number} [a=0] - угол поворота осей, относительно которых рассчитан тензор инерции
+ * @property {SquareMatrix2} J - тензор инерции сечения относительно точки P
  * 
  */
- 
+
+/**
+ * Класс-обёртка для MomentReport
+ * Реализует методы расчёта моментов того же сечения относительно других осей
+ */ 
 class MomentWrapper{
 	
 	/**
@@ -39,15 +41,14 @@ class MomentWrapper{
 	 */
 	static summJ(elements, R){
 		let Jxy = 0;
-		let J = new Vector2.O();
+		let J = Ma.O();
 		for(let fig of elements){
 			fig = fig.parallel(R);
-			Jxy += fig.Jxy;
 			J = J.add(fig.J);
 		}
 		
 		return {
-			Jxy, J,
+			J,
 			P:R
 		};
 	}
