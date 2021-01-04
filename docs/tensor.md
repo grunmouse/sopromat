@@ -266,19 +266,19 @@ $$J' = \left(
 	&
 	-(
 		\frac{1}{2}(J_{xx}-J_{yy})\sin 2\alpha
-		+ J_{xy}\cos 2\alpha
+		+J_{xy}\cos 2\alpha
 	)
 	&
 	0
 	\\
 	-(
 		\frac{1}{2}(J_{xx}-J_{yy})\sin 2\alpha
-		+ J_{xy}\cos 2\alpha
+		+J_{xy}\cos 2\alpha
 	)
 	&
 	J_{xx}\sin^2\alpha
 	+J_{yy}\cos^2\alpha
-	+ J_{xy}\sin 2\alpha
+	+J_{xy}\sin 2\alpha
 	&
 	0
 	\\

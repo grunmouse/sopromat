@@ -18,7 +18,9 @@
     "@grunmouse/assert": "link:..\\assert"
   },
   "dependencies": {
+    "@grunmouse/convex": "link:..\\convex",
     "@grunmouse/math-matrix": "link:..\\math-matrix",
-    "@grunmouse/math-vector": "link:..\\math-vector"
+    "@grunmouse/math-vector": "link:..\\math-vector",
+    "@grunmouse/multioperator": "link:..\\multioperator"
   }
 }
