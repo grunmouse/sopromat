@@ -8,7 +8,7 @@ const {
 } = require('./shell-element.js');
 
 
-class ArcsShell extends ShellBase{
+class ArcsShell extends ElementsShell{
 	constructor(points, arcs){
 	}
 }

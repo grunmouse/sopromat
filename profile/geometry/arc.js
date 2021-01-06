@@ -28,6 +28,10 @@ class Arc {
 		return this.A1 != null && this.A1 == this.A2;
 	}
 	
+	get isAbstract(){
+		return R == null;
+	}
+	
 	isEmbed(A){
 		if(typeof A === 'number'){
 			A = Vector2.fromAngle(A);
@@ -35,29 +39,50 @@ class Arc {
 		return A.isInSector(this.ort1, this.ort2);
 	}
 	
+	isCrossing(arc){
+		if(!(arc instanceof Arc)){
+			arc = new Arc(arc);
+		}
+		
+		return this.isEmbed(arc.ort1) || this.isEmbed(arc.ort2) || arc.isEmbed(this.ort1);
+	}
+	
 	cutStart(A){
 		let {C, R, A1, A2} = this;
 		if(this.isEmbed(A)){
 			A1 = A;
+			return new Arc({C, R, A1, A2});
 		}
-		return new Arc({C, R, A1, A2});
+		return this;
 	}
 	cutEnd(A){
 		let {C, R, A1, A2} = this;
 		if(this.isEmbed(A)){
 			A2 = A;
+			return new Arc({C, R, A1, A2});
 		}
-		return new Arc({C, R, A1, A2});
+		return this;
 	}
-	cutLimits(arc){
+	
+	crossing(arc){
 		let {C, R, A1, A2} = this;
-		if(this.isEmbed(arc.A1)){
-			A1 = arc.A1;
+		
+		if(!(arc instanceof Arc)){
+			arc = new Arc(arc);
 		}
-		if(this.isEmbed(arc.A2)){
-			A2 = arc.A2;
+		
+		if(this.isCrossing(arc){
+			if(this.isEmbed(arc.ort1)){
+				A1 = arc.A1;
+			}
+			if(this.isEmbed(arc.ort2)){
+				A2 = arc.A2;
+			}
+			return new Arc({C, R, A1, A2});
 		}
-		return new Arc({C, R, A1, A2});
+		else{
+			return new Arc({A1:0, A2:0, R, C});
+		}
 	}
 }	
 
