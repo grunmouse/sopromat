@@ -16,7 +16,7 @@
  
 /**
  * @interface ProfileType
- * @property {string} name - описания параметров
+ * @property {string} name - Имя профиля
  * @property {Array<string>} labels - описания параметров
  * 
  */
@@ -26,14 +26,14 @@ class AbstractProfile{
 	/**
 	 * @abstract 
 	 * @static
-	 * @property {string} name - описания параметров
+	 * @property {string} name - Имя профиля
 	 * @implements ProfileType
 	 */
 
 	/**
 	 * @abstract 
 	 * @static
-	 * @property {string} labels - описания параметров
+	 * @property {Array<string>} labels - описания параметров
 	 * @implements ProfileType
 	 */
 	 

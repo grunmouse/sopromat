@@ -51,27 +51,19 @@ class PointElement{
 class ArcElement{
 	constructor(arc){
 		this.arc = arc;
-		this.isFull = arc.A1 == null && arc.A2 == null;
+		this.isFull = arc.isFull;
 	}
 	
-	get isFull(){
-		return this.A1 == null && this.A2 == null;
-	}
 	
 	fromPoint(P){
-		const {C, R, A1, A2} = this;
+		const {C, R, A1, A2} = this.arc;
+		const arc = this.arc;
 		
-		const condition = this.isFull || 
-			()=>(
-				C.sub(P).isInSector(
-					Vector2.fromPolar({abs:R, phi:A1}),
-					Vector2.fromPolar({abs:R, phi:A2})
-				)
-			);
+		const condition = ()=>(arc.isEmbed(C.sub(P)));
 		
 		return Distance({
 			point:()=>(C.sub(P).ort().mul(R).add(C)),
-			distance:()=>(C.sub(P).abs() + this.R),
+			distance:()=>(C.sub(P).abs() + R),
 			condition				
 		});
 	}
@@ -84,18 +76,12 @@ class ArcElement{
 			Distance({
 				point:()=>(Y.mul(R).add(C)),
 				distance:()=>(dist(C)+R),
-				condition:this.isFull || ()=>(Y.isInSector(
-					Vector2.fromPolar({abs:R, phi:A1}),
-					Vector2.fromPolar({abs:R, phi:A2})
-				))
+				condition:()=>(arc.isEmbed(Y))
 			}),
 			Distance({
 				point:()=>(Y.mul(-R).add(C)),
 				distance:()=>(dist(C)-R),
-				condition:this.isFull || ()=>(Y.neg().isInSector(
-					Vector2.fromPolar({abs:R, phi:A1}),
-					Vector2.fromPolar({abs:R, phi:A2})
-				))
+				condition:()=>(arc.isEmbed(Y.neg()))
 			})
 		];
 	}

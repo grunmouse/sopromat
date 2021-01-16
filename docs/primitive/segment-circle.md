@@ -36,7 +36,7 @@ $$F = I_F \bigg|_a^R
 
 $$F =
 R^2 \left(\frac{\pi}{2} - \arcsin\frac{a}{R} \right)
-- a\sqrt{R^2-a^2};$$
+-a\sqrt{R^2-a^2};$$
 $$F = R^2 \arccos\frac{a}{R}- a\sqrt{R^2-a^2}.$$
 Выразим через угол
 $$F = \frac{R^2\alpha}{2} - a R\sin\frac{\alpha}{2} 
@@ -63,7 +63,7 @@ $$I_s
 = 2 R^3 \int \sin t \cos^2 t dt
 ;$$
 $$I_s = 2 R^3 \int cos^2 t d(-\cos t)
-= - \frac{2 R^3 cos^3 t}{3} + C 
+= -\frac{2 R^3 cos^3 t}{3} + C 
 = -\frac{2(R^2 - y^2)^{\frac{3}{2}}}{3} + C
 ;$$
 
@@ -151,7 +151,7 @@ $$J_{xx} = 2 I \bigg|_a^R = 2 R^4 I_t \bigg|_a^R;$$
 $$I_t \bigg|_a^R 
 = \frac{\arcsin\frac{y}{R}}{8}\bigg|_a^R -  \frac{y}{8R} \sqrt{1-\frac{y^2}{R^2}} \left(1 - \frac{2y^2}{R^2}\right)\bigg|_a^R
 = \frac{\pi}{16} - \frac{\arcsin\frac{a}{R}}{8}
-- 0 + \frac{a}{8R} \sqrt{1-\frac{a^2}{R^2}} \left(1 - \frac{2a^2}{R^2}\right);
+-0 + \frac{a}{8R} \sqrt{1-\frac{a^2}{R^2}} \left(1 - \frac{2a^2}{R^2}\right);
 $$
 $$I_t \bigg|_a^R 
 = \frac{1}{8}\left(\frac{\pi}{2} - \arcsin\frac{a}{R} + \frac{a}{R} \sqrt{1-\frac{a^2}{R^2}} \left(1 - \frac{2a^2}{R^2}\right)\right)
@@ -210,9 +210,9 @@ $$\frac{ax^3}{3}\bigg|_{-b}^b =
 ;$$
 
 $$I_t\bigg|_{-b}^b 
-= \frac{\arcsin\frac{b}{R}}{8} -  \frac{b}{8R} \sqrt{1-\frac{b^2}{R^2}} \left(1 - \frac{2b^2}{R^2}\right)
-- \frac{\arcsin\frac{-b}{R}}{8} +  \frac{-b}{8R} \sqrt{1-\frac{b^2}{R^2}} \left(1 - \frac{2b^2}{R^2}\right)
-= \frac{\arcsin\frac{b}{R}}{4} -  \frac{b}{4R} \sqrt{1-\frac{b^2}{R^2}} \left(1 - \frac{2b^2}{R^2}\right)
+=\frac{\arcsin\frac{b}{R}}{8} -  \frac{b}{8R} \sqrt{1-\frac{b^2}{R^2}} \left(1 - \frac{2b^2}{R^2}\right)
+-\frac{\arcsin\frac{-b}{R}}{8} +  \frac{-b}{8R} \sqrt{1-\frac{b^2}{R^2}} \left(1 - \frac{2b^2}{R^2}\right)
+=\frac{\arcsin\frac{b}{R}}{4} -  \frac{b}{4R} \sqrt{1-\frac{b^2}{R^2}} \left(1 - \frac{2b^2}{R^2}\right)
 ;$$
 
 $$\frac{b^2}{R^2} = \frac{R^2-a^2}{R^2} = 1 - \frac{a^2}{R^2};$$
@@ -221,81 +221,81 @@ $$\frac{b}{R} = \sqrt{1 - \frac{a^2}{R^2}} = \sqrt{1 - \cos^2 \frac{\alpha}{2}} 
 $$\arcsin\frac{b}{R} = \frac{\alpha}{2} = \arccos\frac{a}{R}.$$
 
 $$I_t\bigg|_{-b}^b 
-= \frac{\arcsin\frac{b}{R}}{4} -  \frac{b}{4R} \sqrt{1-\frac{b^2}{R^2}} \left(1 - \frac{2b^2}{R^2}\right)
-= \frac{\arccos\frac{a}{R}}{4} -  \frac{1}{4}\sqrt{1 - \frac{a^2}{R^2}} \frac{a}{R} \left(1 - 2 + 2\frac{a^2}{R^2}\right)
+=\frac{\arcsin\frac{b}{R}}{4} -  \frac{b}{4R} \sqrt{1-\frac{b^2}{R^2}} \left(1 - \frac{2b^2}{R^2}\right)
+=\frac{\arccos\frac{a}{R}}{4} -  \frac{1}{4}\sqrt{1 - \frac{a^2}{R^2}} \frac{a}{R} \left(1 - 2 + 2\frac{a^2}{R^2}\right)
 ;$$
 $$I_t\bigg|_{-b}^b 
-= \frac{\arccos\frac{a}{R}}{4} -  \frac{a}{4R}\sqrt{1 - \frac{a^2}{R^2}} \left(2\frac{a^2}{R^2}-1\right)
+=\frac{\arccos\frac{a}{R}}{4} -  \frac{a}{4R}\sqrt{1 - \frac{a^2}{R^2}} \left(2\frac{a^2}{R^2}-1\right)
 ;$$
 
 $$J_{yy} 
-= \frac{R^4\arccos\frac{a}{R}}{4} -  \frac{aR^4}{4R}\sqrt{1 - \frac{a^2}{R^2}} \left(2\frac{a^2}{R^2}-1\right)
-- \frac{2aR^4\left(1-\frac{a^2}{R^2}\right)^{3/2}}{3R}
+=\frac{R^4\arccos\frac{a}{R}}{4} -  \frac{aR^4}{4R}\sqrt{1 - \frac{a^2}{R^2}} \left(2\frac{a^2}{R^2}-1\right)
+-\frac{2aR^4\left(1-\frac{a^2}{R^2}\right)^{3/2}}{3R}
 ;$$
 
 Выразим через угол
 $$J_{yy} 
-= \frac{R^4\alpha}{8} -  \frac{R^4}{4}\cos\frac{\alpha}{2}\sin\frac{\alpha}{2} \left(2\cos^2\frac{\alpha}{2}-1\right)
-- \frac{2R^4\left(1-\cos^2\frac{\alpha}{2}\right)^{3/2}}{3}\cos\frac{\alpha}{2}
+=\frac{R^4\alpha}{8} -  \frac{R^4}{4}\cos\frac{\alpha}{2}\sin\frac{\alpha}{2} \left(2\cos^2\frac{\alpha}{2}-1\right)
+-\frac{2R^4\left(1-\cos^2\frac{\alpha}{2}\right)^{3/2}}{3}\cos\frac{\alpha}{2}
 ;$$
 $$J_{yy} 
-= \frac{R^4\alpha}{8} -  \frac{R^4}{8}\sin\alpha \cos\alpha
-- \frac{2R^4\left(\sin^2\frac{\alpha}{2}\right)^{3/2}}{3}\cos\frac{\alpha}{2}
-= \frac{R^4\alpha}{8} -  \frac{R^4}{8}\sin\alpha \cos\alpha
-- \frac{2R^4 \sin^3\frac{\alpha}{2}}{3}\cos\frac{\alpha}{2}
+=\frac{R^4\alpha}{8} -  \frac{R^4}{8}\sin\alpha \cos\alpha
+-\frac{2R^4\left(\sin^2\frac{\alpha}{2}\right)^{3/2}}{3}\cos\frac{\alpha}{2}
+=\frac{R^4\alpha}{8} -  \frac{R^4}{8}\sin\alpha \cos\alpha
+-\frac{2R^4 \sin^3\frac{\alpha}{2}}{3}\cos\frac{\alpha}{2}
 ;$$
 
 $$J_{yy} 
-= \frac{R^4\alpha}{8} -  \frac{R^4}{8}\sin\alpha \cos\alpha
-- \frac{R^4 \sin^2\frac{\alpha}{2}\sin\alpha}{3}
+=\frac{R^4\alpha}{8} -  \frac{R^4}{8}\sin\alpha \cos\alpha
+-\frac{R^4 \sin^2\frac{\alpha}{2}\sin\alpha}{3}
 ;$$
 $$J_{yy} 
 = \frac{R^4}{8} \left(
 	\alpha
-	-  \sin\alpha \cos\alpha
-	- \frac{8 \sin^2\frac{\alpha}{2}\sin\alpha}{3}
+	-\sin\alpha \cos\alpha
+	-\frac{8 \sin^2\frac{\alpha}{2}\sin\alpha}{3}
 \right)
 ;$$
 $$J_{yy} 
 = \frac{R^4}{8} \left(
 	\alpha
-	-  \sin\alpha \cos\alpha
-	- \frac{4 (1-\cos\alpha)\sin\alpha}{3}
+	-\sin\alpha \cos\alpha
+	-\frac{4 (1-\cos\alpha)\sin\alpha}{3}
 \right)
 ;$$
 $$J_{yy} 
 = \frac{R^4}{8} \left(
 	\alpha
-	-  \sin\alpha \cos\alpha
-	- \frac{4 (\sin\alpha-\sin\alpha\cos\alpha)}{3}
+	-\sin\alpha \cos\alpha
+	-\frac{4 (\sin\alpha-\sin\alpha\cos\alpha)}{3}
 \right)
 ;$$
 $$J_{yy} 
 = \frac{R^4}{8} \left(
 	\alpha
-	- \frac{4}{3} \sin\alpha  
-	+ \frac{1}{3} \sin\alpha\cos\alpha
+	-\frac{4}{3} \sin\alpha  
+	+\frac{1}{3} \sin\alpha\cos\alpha
 \right)
 ;$$
 $$J_{yy} 
 = \frac{R^4}{8} \left(
 	\alpha
-	- \frac{4}{3} \sin\alpha  
-	+ \frac{1}{3} \sin\alpha\left(1-2\sin^2\frac{\alpha}{2}\right)
+	-\frac{4}{3} \sin\alpha  
+	+\frac{1}{3} \sin\alpha\left(1-2\sin^2\frac{\alpha}{2}\right)
 \right)
 ;$$
 $$J_{yy} 
 = \frac{R^4}{8} \left(
 	\alpha
-	- \frac{4}{3} \sin\alpha  
-	+ \frac{1}{3} \sin\alpha
+	-\frac{4}{3} \sin\alpha  
+	+\frac{1}{3} \sin\alpha
 	-\frac{2}{3} \sin\alpha\sin^2\frac{\alpha}{2}
 \right)
 ;$$
 $$J_{yy} 
 = \frac{R^4}{8} \left(
 	\alpha
-	- \sin\alpha  
+	-\sin\alpha  
 	-\frac{2}{3} \sin\alpha\sin^2\frac{\alpha}{2}
 \right)
 .$$
@@ -305,14 +305,14 @@ $$J_{yy}
 $$J_{yy} 
 = \frac{R^4}{8} \left(
 	2\arccos\frac{a}{R}
-	- 2\frac{a}{R}\sqrt{1-\frac{a^2}{R^2}}
+	-2\frac{a}{R}\sqrt{1-\frac{a^2}{R^2}}
 	-\frac{2}{3} \frac{a}{R}\left(1-\frac{a^2}{R^2}\right)^{3/2}
 \right)
 .$$
 $$J_{yy} 
 = \frac{R^4}{4} \left(
 	\arccos\frac{a}{R}
-	-  \frac{a}{R}\sqrt{1-\frac{a^2}{R^2}}\left(
+	-\frac{a}{R}\sqrt{1-\frac{a^2}{R^2}}\left(
 	 1
 	 +\frac{1}{3} \left(1-\frac{a^2}{R^2}\right)
 	\right)
@@ -321,7 +321,7 @@ $$J_{yy}
 $$J_{yy} 
 = \frac{R^4}{4} \left(
 	\arccos\frac{a}{R}
-	-  \frac{a}{3R}\sqrt{1-\frac{a^2}{R^2}}\left(
+	-\frac{a}{3R}\sqrt{1-\frac{a^2}{R^2}}\left(
 	 4
 	 -\frac{a^2}{R^2}
 	\right)
@@ -337,7 +337,7 @@ $$J_{xx}
 $$J_{yy} 
 = \frac{R^4}{4} \left(
 	\arccos\frac{a}{R}
-	-  \frac{a}{3R}\sqrt{1-\frac{a^2}{R^2}}\left(
+	-\frac{a}{3R}\sqrt{1-\frac{a^2}{R^2}}\left(
 	 4
 	 -\frac{a^2}{R^2}
 	\right)
@@ -350,7 +350,7 @@ $$J_{xx}
 $$J_{yy} 
 = \frac{R^4}{8} \left(
 	\alpha
-	- \sin\alpha  
+	-\sin\alpha  
 	-\frac{2}{3} \sin\alpha\sin^2\frac{\alpha}{2}
 \right)
 .$$
