@@ -2,10 +2,10 @@
 const {Vector2} = require('@grunmouse/math-vector');
 
 /**
- * @interface Distance
- * @property point : Vector2
- * @property distance : Number
- * @property condition : Boolean
+ * @interface Distance - представляет расстояние до точки
+ * @property point : Vector2 - точка, расстояние до которой указывается
+ * @property distance : Number - расстояние
+ * @property condition : Boolean - признак, что расстояние валидно и может использоваться
  */
  
 /**
@@ -20,7 +20,7 @@ function Distance(param){
 	return Object.create({}, {
 		point:config(param.point),
 		distance:config(param.distance),
-		condition:config(condition.distance)
+		condition:config(param.condition)
 	});
 }
 	
@@ -41,7 +41,7 @@ class PointElement{
 		return [
 			Distance({
 				point:this.point,
-				distance:()=>(X.ort().cross(this.point.sub(O))),
+				distance:()=>(X.ort().cross(this.point.sub(O))), //Проверить порядок операндов и знак результата
 				condition:true
 			})
 		];

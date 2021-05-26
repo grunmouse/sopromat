@@ -8,7 +8,7 @@ class Shell{
 	constructor(points){
 		this.points = points;
 		let a = this.getEdge(0), b = this.getEdge(1);
-		let order = a.cross(b);
+		let order = a.cross(b); //проверить правильность направления обхода
 		if(order > 0){
 			this.points.reverse();
 		}

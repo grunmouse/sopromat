@@ -6,7 +6,7 @@ const {abs, acos, sqrt} = Math;
  * @typedef {object} MomentReport
  * @property {number} F - площадь сечения
  * @property {Vector2} C - центр тяжести сечения
- * @property {SquareMatrix2} J - тензор инерции сечения относительно точки P
+ * @property {SquareMatrix2} J - тензор инерции сечения относительно начала координат
  * 
  */
 

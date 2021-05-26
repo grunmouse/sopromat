@@ -6,7 +6,7 @@ const {
 } = require('./shell-element.js');
 
 class ElementsShell extends ShellBase {
-	controller(elements){
+	construtor(elements){
 		this.elements = elements;
 	}
 	
@@ -43,7 +43,10 @@ class ElementsShell extends ShellBase {
 			}
 		}
 
-		return [min, max];
+		if(max<0) max = 0;
+		if(min>0) min = 0;
+		
+		return [max, min];
 	}
 	
 }
